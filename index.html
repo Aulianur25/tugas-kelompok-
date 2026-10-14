@@ -1,0 +1,586 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV Gabungan</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #243044;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #123768, #2463a8);
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 18px;
+}
+
+.nav-nama {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.nav-nama button {
+    padding: 15px 10px;
+    border: 1px solid #dbe3ef;
+    border-radius: 10px;
+    background: white;
+    color: #174a8b;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-nama button:hover,
+.nav-nama button.active {
+    background: #174a8b;
+    color: white;
+}
+
+.cv {
+    display: none;
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    border-top: 6px solid #d9ad50;
+    box-shadow: 0 5px 20px #0000000c;
+}
+
+.cv.active {
+    display: block;
+}
+
+.cv h2 {
+    font-size: 30px;
+    color: #174a8b;
+    margin-bottom: 8px;
+}
+
+.kontak {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 25px;
+    overflow-wrap: anywhere;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+section h3 {
+    color: #174a8b;
+    border-bottom: 2px solid #e5eaf1;
+    padding-bottom: 7px;
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+.item {
+    margin-bottom: 15px;
+}
+
+.item strong {
+    display: block;
+}
+
+.tanggal {
+    color: #b18a36;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.pesan {
+    background: #eaf1fb;
+    padding: 13px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    .nav-nama {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cv {
+        padding: 20px;
+    }
+
+    .cv h2 {
+        font-size: 25px;
+    }
+}
+
+@media print {
+    .nav-nama, header, .pesan, footer {
+        display: none;
+    }
+
+    .cv, .cv.active {
+        display: block;
+        margin-bottom: 20px;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>CURRICULUM VITAE</h1>
+    <p>CV Gabungan — Empat Orang</p>
+</header>
+
+<div class="container">
+
+    <div class="pesan">
+        Silakan pilih nama di bawah untuk melihat CV masing-masing.
+    </div>
+
+    <div class="nav-nama">
+        <button class="active" onclick="bukaCV('ilham', this)">
+            Ilham Nawawi
+        </button>
+
+        <button onclick="bukaCV('nashera', this)">
+            Nashera Rahman
+        </button>
+
+        <button onclick="bukaCV('aulia', this)">
+            Aulia Nur Oktapiyani
+        </button>
+
+        <button onclick="bukaCV('reddhy', this)">
+            Reddhy Joferdho
+        </button>
+    </div>
+
+    <!-- CV ILHAM NAWAWI -->
+    <div class="cv active" id="ilham">
+
+        <h2>Ilham Nawawi</h2>
+        <div class="kontak">
+            Telepon: +62 8973333121<br>
+            Email: nawawiilham879@gmail.com<br>
+            Lokasi: Jakarta Barat
+        </div>
+
+        <section>
+            <h3>Profil</h3>
+            <p>
+                Mahasiswa Program Studi Manajemen Pendidikan di
+                UIN Syarif Hidayatullah Jakarta. Memiliki minat pada
+                pengelolaan organisasi, sumber daya, dan strategi bisnis
+                secara efektif dan efisien, khususnya pada lembaga
+                pendidikan. Memiliki minat dan bakat dalam public speaking,
+                kaligrafi, dan lettering.
+            </p>
+        </section>
+
+        <section>
+            <h3>Pendidikan</h3>
+            <div class="item">
+                <strong>Pesantren Daarul Muttaqien 2 Tangerang</strong>
+                <span class="tanggal">2019–2025</span>
+                <p>SMP–SMA</p>
+            </div>
+
+            <div class="item">
+                <strong>UIN Syarif Hidayatullah Jakarta</strong>
+                <span class="tanggal">2025–Sekarang</span>
+                <p>S1 Manajemen Pendidikan</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Pengalaman</h3>
+
+            <div class="item">
+                <strong>Aqlam Mural Kaligrafi</strong>
+                <span class="tanggal">2023</span>
+                <ul>
+                    <li>Mengelola dan merancang proyek dekorasi kaligrafi untuk Musholla Al-Barokah, Cikokol.</li>
+                    <li>Memastikan proyek selesai tepat waktu dengan standar estetika dan kualitas tinggi.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <strong>PT. Magnet Berjangka</strong>
+                <span class="tanggal">2026 — Trading Consultant</span>
+                <ul>
+                    <li>Memberikan konsultasi terkait instrumen perdagangan kepada klien.</li>
+                    <li>Menganalisis tren pasar untuk rekomendasi dan strategi transaksi.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <strong>LDK Syahid Fakultas — Divisi Humas</strong>
+                <span class="tanggal">2026–Sekarang</span>
+                <ul>
+                    <li>Menyusun strategi komunikasi eksternal dan mengelola hubungan antarlembaga fakultas.</li>
+                    <li>Mengadakan kegiatan jaulah untuk kader LDK, fakultas, dan universitas.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <strong>HMPS Manajemen Pendidikan — Divisi Acara</strong>
+                <span class="tanggal">2026</span>
+                <ul>
+                    <li>Merancang susunan acara dan mengoordinasikan kegiatan rapat kerja.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <strong>Pusat Informasi dan Humas UIN Jakarta</strong>
+                <span class="tanggal">Divisi Public Relation</span>
+                <ul>
+                    <li>Menyiarkan live TikTok Tanya Minwin setiap sore.</li>
+                    <li>Memberikan informasi melalui chatbot UIN Jakarta.</li>
+                    <li>Melakukan sosialisasi UIN Jakarta ke sekolah-sekolah.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <strong>Master of Ceremony 3 Bahasa</strong>
+                <span class="tanggal">2024</span>
+                <ul>
+                    <li>Memandu acara menggunakan Bahasa Indonesia, Arab, dan Inggris.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>Lomba</h3>
+            <ul>
+                <li>Peserta Lomba News Anchor PELITA KPI Nasional (Juli 2026).</li>
+                <li>Peserta Lomba MC Baswara Tingkat Nasional (Januari 2026).</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- CV NASHERA RAHMAN -->
+    <div class="cv" id="nashera">
+
+        <h2>Nashera Rahman</h2>
+        <div class="kontak">
+            Telepon: +62 89675757411<br>
+            Email: eyaasera@gmail.com<br>
+            Tempat, tanggal lahir: Jakarta, 7 Maret 2005<br>
+            Alamat: Jl. Persahabatan No. 91, RT 11/RW 04,
+            Cipedak, Jagakarsa, Jakarta Selatan
+        </div>
+
+        <section>
+            <h3>Pendidikan</h3>
+            <ul>
+                <li>PAUD Rambutan <span class="tanggal">2010–2012</span></li>
+                <li>SDN Cipedak 03 Jagakarsa <span class="tanggal">2012–2018</span></li>
+                <li>MTs Daarul Rahman Jakarta <span class="tanggal">2018–2021</span></li>
+                <li>MA Daarul Rahman Jakarta <span class="tanggal">2021–2024</span></li>
+                <li>UIN Syarif Hidayatullah Jakarta <span class="tanggal">2025–Sekarang</span><br>S1 Manajemen Pendidikan</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Pengalaman Kerja</h3>
+            <div class="item">
+                <strong>Guru Pengabdian MTs dan MA Pondok Pesantren Daar el Hikam</strong>
+                <span class="tanggal">2024–2025</span>
+                <p>Pondok Ranji, Tangerang Selatan.</p>
+            </div>
+
+            <div class="item">
+                <strong>Guru Les Privat Anak Calistung</strong>
+                <span class="tanggal">2025</span>
+                <p>Jagakarsa.</p>
+            </div>
+
+            <div class="item">
+                <strong>Pengelola Usaha F&amp;B Fried Chicken</strong>
+                <span class="tanggal">2025–Sekarang</span>
+            </div>
+        </section>
+
+        <section>
+            <h3>Pengalaman Organisasi</h3>
+            <ul>
+                <li>Ketua Konsulat Putri DKI Raya 1, Ponpes Daarul Rahman (2021–2022).</li>
+                <li>Ketua Pelajar Ikatan Pelajar Putra-Putri Ponpes Daarul Rahman (2022–2023).</li>
+                <li>Pengurus kelas akhir Madrasah Aliyah, Divisi Pengajaran (2023–2024).</li>
+                <li>Volunteer Taman Baca Anak Cercondeso (2025).</li>
+                <li>Ketua Angkatan Alumni Daarul Rahman (2025–Sekarang).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Prestasi dan Kegiatan</h3>
+            <ul>
+                <li>Juara 3 lomba tari tradisional antarsekolah dasar (2017).</li>
+                <li>Mengikuti lomba lari atletik 200 meter tingkat sekolah dasar (2017).</li>
+                <li>Juara 1 lomba qosidah kelompok antarangkatan Aliyah dan Tsanawiyah (2022).</li>
+                <li>Mengikuti lomba karya tulis cerita tingkat nasional (2026).</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- CV AULIA NUR OKTAPIYANI -->
+    <div class="cv" id="aulia">
+
+        <h2>Aulia Nur Oktapiyani</h2>
+        <div class="kontak">
+            Telepon: +62 5882501716<br>
+            Email: aulianuroktapiyani@gmail.com<br>
+            Bogor, 15 Oktober 2006
+        </div>
+
+        <section>
+            <h3>Pendidikan</h3>
+            <ul>
+                <li>PAUD Bina Trampil <span class="tanggal">2010–2011</span></li>
+                <li>SDN Sukasari 05 <span class="tanggal">2012–2018</span></li>
+                <li>MTs Multazam Bogor <span class="tanggal">2018–2021</span></li>
+                <li>MA Multazam Bogor <span class="tanggal">2022–2024</span></li>
+                <li>UIN Syarif Hidayatullah Jakarta <span class="tanggal">2025–Sekarang</span></li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Pengalaman Organisasi dan Kegiatan</h3>
+
+            <div class="item">
+                <strong>Sekolah Dasar</strong>
+                <ul>
+                    <li>Perwakilan tim Paskibra SDN Sukasari 05 dalam lomba tingkat kecamatan.</li>
+                    <li>Juara 1 lomba fashion show Hari Kartini.</li>
+                    <li>Anggota aktif kesenian angklung dan hadroh.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <strong>Sekolah Menengah Pertama</strong>
+                <ul>
+                    <li>Anggota aktif bela diri Wushu.</li>
+                    <li>Anggota aktif paduan suara.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <strong>Sekolah Menengah Atas</strong>
+                <ul>
+                    <li>Anggota OSIS Divisi Informasi.</li>
+                    <li>Anggota aktif tata boga sekolah.</li>
+                    <li>Ketua OSIS Divisi Kesehatan.</li>
+                    <li>Panitia panggung seni dan budaya sekolah.</li>
+                    <li>Tim aktif hadroh.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <strong>UIN Syarif Hidayatullah Jakarta</strong>
+                <ul>
+                    <li>Mempublikasikan karya tulis ilmiah secara sistematis dan berbasis data akademis.</li>
+                    <li>Relawan sekaligus panitia Program Sahabat Mendidik.</li>
+                    <li>Aktif mengikuti kegiatan sosial eksternal.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>Pengalaman Kerja</h3>
+            <div class="item">
+                <strong>Staf Administrasi dan Pengiriman</strong>
+                <ul>
+                    <li>Memproses pesanan masuk dari berbagai marketplace.</li>
+                    <li>Menyusun jadwal pengiriman harian.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>Keterampilan</h3>
+            <strong>Hard Skills</strong>
+            <ul>
+                <li>CapCut</li>
+                <li>Canva</li>
+                <li>Microsoft Word</li>
+                <li>Microsoft Excel</li>
+            </ul>
+
+            <br>
+
+            <strong>Soft Skills</strong>
+            <ul>
+                <li>Kepemimpinan</li>
+                <li>Manajemen waktu</li>
+                <li>Kerja sama tim</li>
+                <li>Ketelitian</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- CV REDDHY JOFERDHO -->
+    <div class="cv" id="reddhy">
+
+        <h2>Reddhy Joferdho</h2>
+        <div class="kontak">
+            Data kontak ditampilkan sesuai informasi CV sumber.
+        </div>
+
+        <section>
+            <h3>Profil</h3>
+            <p>
+                Lulusan SMK jurusan Otomatisasi dan Tata Kelola
+                Perkantoran yang memiliki pengalaman di bidang
+                administrasi dan pelayanan pelanggan. Mampu mengelola
+                korespondensi, basis data, menyusun laporan keuangan
+                sederhana menggunakan Microsoft Excel, menyusun laporan
+                kerja dengan Microsoft Word, serta melakukan administrasi
+                email menggunakan Microsoft Outlook. Memiliki kemampuan
+                komunikasi dan kerja sama yang baik serta ingin
+                mengembangkan kemampuan di bidang administrasi keuangan.
+            </p>
+        </section>
+
+        <section>
+            <h3>Pengalaman Kerja</h3>
+            <div class="item">
+                <strong>Layanan Umum (PKL) — Resimen Arhanud 1/F</strong>
+                <span class="tanggal">1 September–31 Oktober 2022</span>
+                <ul>
+                    <li>Melakukan pelayanan anggota dengan menerima pembuatan surat cuti.</li>
+                    <li>Mengelola korespondensi kantor menggunakan buku agenda dan Microsoft Excel.</li>
+                    <li>Mencatat gaji anggota, termasuk gaji pokok dan tunjangan.</li>
+                    <li>Mencatat data rekapitulasi anggota dari bagian lain.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <strong>Pengalaman Perhotelan dan Acara</strong>
+                <ul>
+                    <li>Waiter di Hotel Trembesi BSD.</li>
+                    <li>Banquet dan steward di Table Top Mall Casablanca.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>Pengalaman Organisasi</h3>
+            <div class="item">
+                <strong>Sekretaris Umum MPK OSIS SMK Kartika X-2 Jakarta</strong>
+                <span class="tanggal">Juli 2022–Mei 2023</span>
+                <ul>
+                    <li>Mengelola jadwal, dokumen, database, laporan kerja, dan proposal kegiatan.</li>
+                    <li>Menyelenggarakan lebih dari 20 rapat kerja, termasuk jadwal, undangan, bahan rapat, dan notulen.</li>
+                    <li>Mengelola administrasi keuangan, memverifikasi transaksi, dan mengumpulkan bukti transaksi.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <strong>Bendahara Umum OSIS SMK Kartika X-2 Jakarta</strong>
+                <span class="tanggal">Juli 2023–Mei 2024</span>
+                <ul>
+                    <li>Mengelola anggaran lebih dari Rp100 juta untuk 12 bulan dan lebih dari 10 program kerja/kegiatan.</li>
+                    <li>Menyusun laporan keuangan bulanan dan laporan pertanggungjawaban kegiatan.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>Pendidikan</h3>
+            <div class="item">
+                <strong>SMK Kartika X-2 Jakarta</strong>
+                <span class="tanggal">Juli 2021–Mei 2024</span>
+                <p>Jurusan Otomatisasi dan Tata Kelola Perkantoran.</p>
+                <p>Mata pelajaran relevan: Otomatisasi dan Tata Kelola Kepegawaian, Otomatisasi dan Tata Kelola Keuangan, serta Administrasi Perkantoran.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Kemampuan</h3>
+            <ul>
+                <li>Bahasa Indonesia.</li>
+                <li>Microsoft Word dan Microsoft Excel.</li>
+                <li>Akuntansi, audit, pembukuan, analisis dan penyusunan laporan keuangan.</li>
+                <li>Manajemen produksi, kerja sama, dan komunikasi.</li>
+            </ul>
+        </section>
+    </div>
+
+</div>
+
+<footer>
+    CV Gabungan · Website Profil Profesional
+</footer>
+
+<script>
+function bukaCV(id, tombol) {
+    // Sembunyikan seluruh CV
+    document.querySelectorAll('.cv').forEach(function(cv) {
+        cv.classList.remove('active');
+    });
+
+    // Hilangkan status aktif dari semua tombol
+    document.querySelectorAll('.nav-nama button').forEach(function(btn) {
+        btn.classList.remove('active');
+    });
+
+    // Tampilkan CV yang dipilih
+    document.getElementById(id).classList.add('active');
+
+    // Tandai tombol yang dipilih
+    tombol.classList.add('active');
+
+    // Kembali ke bagian atas halaman
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+</script>
+
+</body>
+</html>
+```
